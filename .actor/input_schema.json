@@ -1,0 +1,36 @@
+{
+    "title": "Malaysia Halal Supplier Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Keyword (Halal Category)",
+            "type": "string",
+            "description": "The specific Halal industry (e.g., 'halal food supplier', 'halal cosmetics', 'halal logistics').",
+            "editor": "textfield",
+            "prefill": "halal food supplier"
+        },
+        "location": {
+            "title": "Location (City/State)",
+            "type": "string",
+            "description": "Malaysia Region (e.g., 'Selangor', 'Kuala Lumpur', 'Johor').",
+            "editor": "textfield",
+            "prefill": "Selangor"
+        },
+        "maxLeads": {
+            "title": "Maximum Leads",
+            "type": "integer",
+            "description": "Maximum number of Malaysia Halal leads to extract.",
+            "default": 100,
+            "minimum": 1
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Proxy settings. Apify Residential Proxy (Malaysia targeted) is highly required.",
+            "prefill": { "useApifyProxy": true },
+            "editor": "proxy"
+        }
+    },
+    "required": ["keyword", "location"]
+}
