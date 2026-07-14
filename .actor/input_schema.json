@@ -3,19 +3,14 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        "keyword": {
-            "title": "Keyword (Halal Category)",
-            "type": "string",
-            "description": "The specific Halal industry (e.g., 'halal food supplier', 'halal cosmetics', 'halal logistics').",
-            "editor": "textfield",
-            "prefill": "halal food supplier"
-        },
-        "location": {
-            "title": "Location (City/State)",
-            "type": "string",
-            "description": "Malaysia Region (e.g., 'Selangor', 'Kuala Lumpur', 'Johor').",
-            "editor": "textfield",
-            "prefill": "Selangor"
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "List of search URLs to scrape.",
+            "editor": "requestListSources",
+            "prefill": [
+                { "url": "https://www.halal.gov.my/v4/index.php?data=zIklqwdV" }
+            ]
         },
         "maxLeads": {
             "title": "Maximum Leads",
@@ -32,5 +27,5 @@
             "editor": "proxy"
         }
     },
-    "required": ["keyword", "location"]
+    "required": ["startUrls"]
 }
